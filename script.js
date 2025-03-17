@@ -25,7 +25,7 @@ function addExpense() {
   let inputField = expenseInput;
   let newExpense = parseFloat(inputField.value);
 
-  if (newExpense > 0) {
+  if (!isNaN(newExpense) && newExpense > 0) {
     spending.expense += newExpense;
     updateDisplay();
   } else {
